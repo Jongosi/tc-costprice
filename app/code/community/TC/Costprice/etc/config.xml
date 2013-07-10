@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author     TwinCreations Team <jason@twincreations.co.uk>
+ * @copyright  Copyright (c) 2013 TwinCreations <http://twincreations.co.uk/>
+ */
+-->
+<config>
+    <modules>
+        <TC_Costprice>
+            <version>0.1.0</version>
+        </TC_Costprice>
+    </modules>
+    <global>
+        <helpers>
+            <tc_costprice>
+                <class>TC_Costprice_Helper</class>
+            </tc_costprice>
+        </helpers>
+        <models>
+            <adminhtml>
+                <class>Mage_Adminhtml_Model</class>
+                <resourceModel>adminhtml_resource</resourceModel>
+            </adminhtml>
+            <adminhtml_resource>
+                <class>Mage_Adminhtml_Model_Resource</class>
+                <deprecatedNode>adminhtml_mysql4</deprecatedNode>
+            </adminhtml_resource>
+        </models>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_grid>TC_Costprice_Block_Adminhtml_Sales_Order_Grid</sales_order_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+</config>
